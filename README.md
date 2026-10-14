@@ -1,41 +1,116 @@
-# Planer putovanja - Mobilno računarstvo
+# Travel Planner — Mobile Computing
 
-Mobilna hibridna aplikacija za planiranje i organizaciju putovanja, razvijena u okviru predmeta Mobilno računarstvo na Fakultetu organizacionih nauka.
+A hybrid mobile application for planning and organizing trips, developed as part of the Mobile Computing course at the Faculty of Organizational Sciences (FON).
 
-## Opis projekta
+## 🌍 About the Project
 
-Aplikacija omogućava korisnicima da planiraju svoja putovanja birajući države i gradove, uz detaljnu evidenciju troškova smeštaja, prevoza i termina putovanja. Centralni entitet aplikacije je **Putovanje**, koje povezuje geografske lokacije sa logističkim podacima korisnika.
+Travel Planner helps users organize their trips by selecting countries and cities and managing essential travel details, including accommodation, transportation, travel dates, and expenses.
 
-Sistem je razvijen korišćenjem **Ionic** i **Angular** framework-a, dok se za skladištenje podataka i autentifikaciju koristi **Firebase Realtime Database**. Sva komunikacija sa bazom podataka realizovana je isključivo putem **REST API HTTP zahteva**.
+The central entity of the application is a **Trip**, which connects geographical locations with the user's travel arrangements and logistical information.
 
-## Funkcionalnosti
+The application is built with **Ionic** and **Angular**, while **Firebase Realtime Database** is used for data storage. Authentication and database communication are implemented through Firebase REST APIs and HTTP requests.
 
-### Autentifikacija
+## ✨ Features
 
-* **Registracija i prijava:** Korisnik kreira nalog kako bi upravljao ličnim listama putovanja.
-* **Firebase Auth:** Autentifikacija se vrši putem Firebase REST API-ja.
+### 🔐 Authentication
+- User registration and login
+- Firebase Authentication through the Firebase REST API
+- Personal trip management for registered users
 
-### Upravljanje putovanjima 
+### 🧳 Trip Management
 
-* **Kreiranje (Create):** Prilikom kreiranja putovanja, korisnik bira državu (iz predefinisanog menija) i unosi grad, datume (početak i kraj), vrstu i cenu prevoza, vrstu i cenu smeštaja.
-* **Pregled (Read):** Prikaz svih planiranih putovanja korisnika, sa mogućnošću pregleda putovanja grupisanih po državama. Moguć pregled statistike putovanja.
-* **Ažuriranje (Update):** Izmena svih parametara postojećeg putovanja.
-* **Brisanje (Delete):** Uklanjanje putovanja iz baze podataka.
+The application supports full CRUD (Create, Read, Update, Delete) operations for trips.
 
-### Složeni slučaj korišćenja 
+- **Create:** Select a country from a predefined list, enter a city, specify departure and return dates, and define transportation and accommodation types and costs.
+- **Read:** View planned trips and browse trips grouped by country.
+- **Statistics:** View trip statistics.
+- **Update:** Edit existing trip details, including destinations, dates, transportation, accommodation, and costs.
+- **Delete:** Remove trips from the database.
 
-* **Kolaboracija korisnika:** Korisnik može dodati drugog registrovanog korisnika u svoje putovanje.
-* **Zajednički pregled:** Dodati korisnik takođe dobija pravo pregleda tog putovanja.
-* **Interakcija:** Omogućeno ostavljanje komentara na putovanja od strane svih učesnika povezanih sa tim putovanjem.
+### 👥 Collaborative Trip Planning
+- Add another registered user to a trip.
+- Allow invited participants to view shared trip details.
+- Enable participants associated with a trip to leave comments.
+- Support collaborative trip planning and information sharing.
 
-## Tehnologije
+### 💰 Travel Expense Tracking
+- Record transportation costs.
+- Record accommodation costs.
+- Keep travel details and expenses organized within each trip.
 
-* **Framework:** Ionic + Angular
-* **Baza podataka:** Firebase Realtime Database
-* **Komunikacija:** REST API (HTTP klijent)
-* **Verzionisanje koda:** Git / GitHub
+## 🛠 Tech Stack
 
-## Autori
+| Technology | Purpose |
+|---|---|
+| Ionic | Hybrid mobile application framework |
+| Angular | Frontend framework and application architecture |
+| TypeScript | Application development and type safety |
+| Firebase Realtime Database | Data storage and synchronization |
+| Firebase Authentication REST API | User authentication |
+| REST API / HTTP | Communication with Firebase services |
+| Git and GitHub | Version control and source code management |
 
-* Jovana Grujić 2022/0376
-* Ana Dobrijević 2022/0032
+## 🏗 Application Architecture
+
+The application uses Ionic and Angular to provide the mobile user interface and application logic. Firebase provides the backend services for authentication and data storage.
+
+Communication with Firebase is performed through HTTP requests using REST APIs.
+
+The main application entity is **Trip**, which contains travel information such as:
+- Destination country and city
+- Start and end dates
+- Transportation type and cost
+- Accommodation type and cost
+- Associated users and trip comments
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js and npm
+- Ionic CLI
+- A Firebase project with the required services configured
+- Git
+
+### 1. Clone the Repository
+
+```bash
+git clone <repository-url>
+cd <repository-directory>
+```
+
+Replace the placeholders with the actual repository URL and directory name.
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Configure Firebase
+
+Create or configure a Firebase project and enable the services required by the application.
+
+Configure the Firebase connection settings according to the project's existing configuration files. Use your own Firebase project credentials and avoid committing private secrets or sensitive configuration values.
+
+### 4. Run the Application
+
+Start the development server using the command supported by the project's configuration:
+
+```bash
+ionic serve
+```
+
+The application will be available at the local address displayed in the terminal.
+
+For mobile device testing or building, refer to the Ionic CLI documentation and the platform configuration included in the project.
+
+## 🎓 Academic Context
+
+This project was developed as part of the **Mobile Computing** course at the **Faculty of Organizational Sciences, University of Belgrade**.
+
+It demonstrates the development of a hybrid mobile application using Ionic and Angular, integration with Firebase REST APIs, user authentication, data management, and collaborative functionality.
+
+## 👩‍💻 Authors
+
+- **Jovana Grujić** — 2022/0376
+- **Ana Dobrijević** — 2022/0032
